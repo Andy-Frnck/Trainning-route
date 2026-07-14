@@ -1,0 +1,13 @@
+table{
+  border-collapse: collapse;
+  border: 1px solid grey;
+}
+th + th, td+td{
+  border-left: 1px solid grey;
+}
+tr + tr{
+  border: 1px solid ;
+}
+th{
+  border-bottom: 1px solid grey;
+}
