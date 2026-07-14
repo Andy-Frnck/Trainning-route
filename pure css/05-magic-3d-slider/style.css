@@ -1,0 +1,69 @@
+
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .slider {
+  --quantity: 10;
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+
+}
+
+.banner .slider .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@keyframes autoRun{
+  from{
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to{
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    
+  }
+}
+
+.banner .content{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1400px, 100vw);
+  height: max-content;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner .content h1{
+  font-family: "Rubik Glitch";
+  font-size: 10em;
+  line-height: 1em;
+  color: antiquewhite;
+}
+
+.banner .content .author{
+  font-family: "Poppins";
+  text-align: right;
+  max-width: 200px;  
+}
+

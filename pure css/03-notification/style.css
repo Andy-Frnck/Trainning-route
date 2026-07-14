@@ -1,0 +1,155 @@
+body {
+  font-family: sans-serif;
+  background-color: #191a21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.notifications {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2em;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 470px;
+}
+
+.notification {
+  background: linear-gradient(135deg, #03346b 0%, #242833 40%);
+  padding: 1em;
+  border-radius: 10px;
+  color: #808c97;
+  width: 100%;
+  animation: fadeOut 400ms ease-out 3s;
+}
+.notification,.notification > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+}
+
+.notification span{
+  font-size: 1.7em;
+}
+
+.close-btn{
+  cursor: pointer;
+}
+
+.notification h3{
+  color: #fff;
+  margin-bottom: 0.2em;
+}
+
+.icon{
+  width: 1.5em;
+  height: 1.5em;
+  color: #218afa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.info ion-icon{
+  color: #0c5ab3;
+  height: 30px;
+  transform: scale(1.5);
+  margin-left: 10px;
+}
+
+.success{
+  background: linear-gradient(
+    135deg,#084431 0%,#232631 40%
+  );
+}
+
+.success .icon{
+  width: 1.5em;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transform: scale(1.5);
+  margin-left: 10px;
+  color: #26f2b1;
+}
+
+.success .close-btn{
+  transform: scale(1.5);
+  color: #26f2b1;
+}
+
+.danger{
+  background: linear-gradient(
+    135deg, #480607 0%, #232631 40%
+  ) ;
+}
+
+.danger .icon{
+  width: 1.5em;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transform: scale(1.5);
+  margin-left: 10px;
+  color: #ff5c5a;
+
+}
+
+.danger .close-btn{
+  transform: scale(1.5);
+  color: #ff5c5a;
+}
+
+.btn{
+  border: none;
+  font-size: 20px;
+  padding: 0.5em 1.5em;
+  margin: 1.5em;
+  color: white;
+  background: #218afa;
+  border-radius:8px;
+  cursor: pointer; 
+  transition: background .1s ease-in;
+}
+.btn1:hover{
+  background:#1f7adc;
+
+}
+.btn2{
+  background: #15b555;
+  &:hover{
+    background-color:#139948;
+  }
+}
+.btn3{
+  background: #ff2e2a;
+  &:hover{
+    background-color:#df2724;
+  }
+}
+
+@keyframes fadeOut {
+  100%{
+    opacity: 0;
+  }
+}
+
